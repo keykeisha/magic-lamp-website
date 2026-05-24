@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>My Watchlist</title>
+<link rel="stylesheet" href="product.css">
+</head>
+
+<body class="dark">
+
+<h1 style="text-align:center;color:#facc15;margin-top:30px;">
+⭐ My Watchlist
+</h1>
+
+<div id="watchlist" class="movie-results"></div>
+
+<script>
+let container = document.getElementById("watchlist");
+
+function loadWatchlist(){
+
+let list = JSON.parse(localStorage.getItem("watchlist") || "[]");
+
+container.innerHTML = "";
+
+if(list.length === 0){
+container.innerHTML = "<p style='color:white;text-align:center'>Empty</p>";
+return;
+}
+
+list.forEach((m,i)=>{
+container.innerHTML += `
+<div class="movie-card">
+<img src="${m.poster}">
+<div class="movie-info">
+<h3>${m.title}</h3>
+<p>⭐ ${m.rating}</p>
+
+<button onclick="removeMovie(${i})">❌ Remove</button>
+
+</div>
+</div>
+`;
+});
+}
+
+function removeMovie(i){
+
+let list = JSON.parse(localStorage.getItem("watchlist") || "[]");
+
+list.splice(i,1);
+
+localStorage.setItem("watchlist", JSON.stringify(list));
+
+loadWatchlist();
+}
+
+loadWatchlist();
+</script>
