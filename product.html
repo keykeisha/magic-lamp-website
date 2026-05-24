@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Product | Magic Lamp</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="product.css">
+
+</head>
+
+<body class="dark">
+
+<header class="header">
+
+<div class="header-left">
+
+<img src="assets/images/logo.png" class="logo">
+
+<div class="title-group">
+
+<h1 class="title">Magic Lamp</h1>
+<p class="slogan">Find Your Movie</p>
+
+</div>
+
+</div>
+
+<nav class="header-center">
+
+<a href="index.html">Home</a>
+<a href="product.html">Product</a>
+<a href="process.html">Design Process</a>
+<a href="watchlist.html">Watchlist ⭐</a>
+
+</nav>
+
+<div class="header-right">
+
+<button onclick="toggleMode()" class="mode-btn">🌙</button>
+
+</div>
+
+</header>
+
+<section class="container">
+
+<h2 class="section-title">🪔 Magic Movie Recommendation</h2>
+
+<p class="text">Choose Genre or Mood ✨</p>
+
+<select id="typeSelect">
+
+<option value="genre">Genre</option>
+<option value="mood">Mood</option>
+
+</select>
+
+<select id="categorySelect">
+<option value="">Choose Category</option>
+</select>
+
+<button onclick="findMovies()" class="lamp-btn">
+✨ Reveal My Movies
+</button>
+
+<h3 id="magic-text"></h3>
+
+<div id="movie-results" class="movie-results"></div>
+
+<div id="details-modal" class="details-modal">
+
+<div id="details-content"></div>
+
+<span class="close-details" onclick="closeDetails()">
+✕
+</span>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

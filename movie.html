@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Movie Detail</title>
+
+<link rel="stylesheet" href="product.css">
+
+</head>
+
+<body class="dark">
+
+<div
+class="movie-hero"
+id="movieHero"
+>
+
+<div class="overlay"></div>
+
+<div class="movie-content">
+
+<img
+id="detail-poster"
+class="detail-poster"
+>
+
+<div class="detail-info">
+
+<h1 id="detail-title"></h1>
+
+<p id="detail-rating"></p>
+
+<div class="genre-tags">
+
+<span>Adventure</span>
+<span>Drama</span>
+<span>Fantasy</span>
+
+</div>
+
+<div class="overview-box">
+
+<h3>Overview</h3>
+
+<p id="overview-text">
+
+An inspiring movie full of adventure
+and self discovery.
+
+</p>
+
+</div>
+
+<div class="button-group">
+
+<a
+id="detail-watch"
+target="_blank"
+class="watch-btn"
+>
+
+📺 Watch Now
+
+</a>
+
+<a
+id="detail-trailer-btn"
+target="_blank"
+class="trailer-btn"
+>
+
+▶ Trailer
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+document.getElementById(
+"detail-title"
+).innerHTML =
+localStorage.getItem("movieTitle");
+
+document.getElementById(
+"detail-poster"
+).src =
+localStorage.getItem("moviePoster");
+
+document.getElementById(
+"detail-rating"
+).innerHTML =
+"⭐ " +
+localStorage.getItem("movieRating");
+
+document.getElementById(
+"movieHero"
+).style.backgroundImage =
+"url('" +
+localStorage.getItem("moviePoster") +
+"')";
+
+document.getElementById(
+"detail-watch"
+).href =
+"https://www.google.com/search?q=watch+" +
+localStorage.getItem("movieTitle") +
+"+on+" +
+localStorage.getItem("movieAvailable");
+
+document.getElementById(
+"detail-trailer-btn"
+).href =
+localStorage.getItem("movieTrailer");
+
+</script>
+
+</body>
+
+</html>
