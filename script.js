@@ -230,17 +230,7 @@ available:"Netflix",
 poster:"https://image.tmdb.org/t/p/w500/yRt7MGBElkLQOYRvLTT1b3B1rcp.jpg",
 trailer:"https://www.youtube.com/watch?v=UtjH6Sk7Gxs"
 },
-
-{
-title:"To All The Boys I've Loved Before",
-year:"2018",
-duration:"1h 39m",
-rating:"7.0",
-available:"Netflix",
-poster:"https://image.tmdb.org/t/p/w500/hKHZhUbIyUAjcSrqJThFGYIR6kI.jpg",
-trailer:"https://www.youtube.com/watch?v=555oiY9RWM4"
-},
-
+  
 {
 title:"Clueless",
 year:"1995",
@@ -250,7 +240,17 @@ available:"Netflix",
 poster:"https://image.tmdb.org/t/p/w500/8AwVTcgpTnmeOs4TdTWqcFDXEsA.jpg",
 trailer:"https://www.youtube.com/watch?v=RS0KyTZ3Ie4"
 },
-
+ 
+{
+title:"To All The Boys I've Loved Before",
+year:"2018",
+duration:"1h 39m",
+rating:"7.0",
+available:"Netflix",
+poster:"https://image.tmdb.org/t/p/w500/hKHZhUbIyUAjcSrqJThFGYIR6kI.jpg",
+trailer:"https://www.youtube.com/watch?v=555oiY9RWM4"
+},
+  
 {
 title:"How to Lose a Guy in 10 Days",
 year:"2003",
